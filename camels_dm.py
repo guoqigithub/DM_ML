@@ -46,7 +46,7 @@ def DM_SIMBA(name_X,name_Y,snap):
 def DM_TNG(name_X,name_Y,z):
     sim = tenet.sim('./TNG/1P/1P_1_0/', redshift=redshift[i])
     rays = h5py.File("./TNG/1P/1P_1_0/data.files/rays/voronoi_fullbox_n%dd2_%03d.hdf5"%(nRaysPerDim,snapshot_num[i]))
-    rays_off, rays_len, rays_dl, rays_inds, cell_inds, ray_pos, ray_dir, total_dl = generate_rays_voronoi_fullbox(sim,nRaysPerDim=nRaysPerDim)
+    # rays_off, rays_len, rays_dl, rays_inds, cell_inds, ray_pos, ray_dir, total_dl = generate_rays_voronoi_fullbox(sim,nRaysPerDim=nRaysPerDim)
     nRaysPerDim = 512
     generate_rays_voronoi_fullbox(sim,nRaysPerDim)
 
